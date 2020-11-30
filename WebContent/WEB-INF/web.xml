@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<display-name>OnlineShopping</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>  
+  
+  <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/error.jsp</location>
+  </error-page>
+  
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+    
+    
+    <servlet>
+        <description></description>
+        <servlet-name>studentRegisterAccess</servlet-name>
+        <servlet-class>com.login.controller.StudentRegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>studentRegisterAccess</servlet-name>
+        <url-pattern>/studentRegisterAccess</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <description></description>
+        <servlet-name>loginAccess</servlet-name>
+        <servlet-class>com.login.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginAccess</servlet-name>
+        <url-pattern>/loginAccess</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <description></description>
+        <display-name>LogoutServlet</display-name>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.login.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
